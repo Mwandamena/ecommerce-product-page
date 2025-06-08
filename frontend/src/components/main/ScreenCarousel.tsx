@@ -19,17 +19,14 @@ const ScreenCarousel = ({
 }: Props) => {
   const carouselArray = [...carouselImages];
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
 
   // controls function
   const nextSlide = () => {
-    setDirection(1);
     setCurrent(current === carouselArray.length - 1 ? 0 : current + 1);
     console.log(current);
   };
 
   const prevSlide = () => {
-    setDirection(-1);
     setCurrent(current === 0 ? carouselArray.length - 1 : current - 1);
     console.log(current);
   };
@@ -38,7 +35,6 @@ const ScreenCarousel = ({
     if (event.key === "ArrowLeft") {
       prevSlide();
     } else if (event.key === "ArrowRight") {
-      setDirection(1);
       setCurrent(current === carouselArray.length - 1 ? 0 : current + 1);
     }
   };

@@ -7,7 +7,7 @@ import ScreenCarousel from "./ScreenCarousel.tsx";
 export default function Carousel() {
   const carouselArray = [...carouselImages];
   const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
+  const [, setDirection] = useState(0);
   const [open, setOpen] = useState(false);
 
   // controls function
